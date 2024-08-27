@@ -1,0 +1,29 @@
+{
+    "name": "Victorian English converter",
+    "version": "0.1.0",
+    "description": "Converts emails to victorian english",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": [
+        "https://mail.google.com/"
+      ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+  {
+    "matches": ["https://mail.google.com/*"],
+    "js": ["contentScript.js"]
+  }
+],
+"action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.jpeg"
+  },
+  "icons": {
+    "16": "icon.jpeg",
+    "48": "icon.jpeg",
+    "128": "icon.jpeg"
+  },
+
+    "manifest_version": 3
+}
